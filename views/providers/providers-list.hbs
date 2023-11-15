@@ -1,0 +1,66 @@
+<!-- Provider List Section -->
+<section class="page-section" id="provider-list">
+  <div class="container">
+    <h2 class="text-center mt-0">At Your Service</h2>
+    <hr class="divider my-4">
+    <div class="table-responsive">
+      <a class="btn btn-primary my-2" href="/providers/add-provider/">Add New Provider</a>
+      <table border="1" cellspacing="0" cellpadding="5px" class="table table-hover table-bordered">
+        <thead class="thead-light">
+          <tr>
+	    <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Age</th>
+            <th scope="col">Pay</th>
+            <th scope="col">DepartmentId</th>
+            <th scope="col">GetTaxForm</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each providers}}
+          <tr>
+	    
+            <th scope="row">{{id}}</th>
+	     <td>{{Name}}</td>	
+            <td>{{Zip}}</td>
+            <td>{{Age}}</td>
+            <td>{{Pay}}</td>
+            <td>{{DepartmentId}}</td>
+            <td>{{GetTaxForm}}</td>
+	    <td>
+
+              <a href="/providers/info/{{id}}" class="btn btn-info btn-sm">More info...</a>
+              <a href="/providers/edit/{{id}}" class="btn btn-secondary btn-sm">Edit</a>
+              <a href="#my{{id}}" class="btn btn-danger btn-sm" data-toggle="modal">Delete</a>
+
+              <!-- Modal Window - Confirmation -->
+              <div id="my{{id}}" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="icon-box">
+                        <i class="material-icons">&#xE5CD;</i>
+                      </div>
+                      <h4 class="modal-title">Are you sure?</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Do you really want to delete this provider?<br>
+                        This process cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info btn-md" data-dismiss="modal">Cancel</button>
+                      <a href="/providers/delete/{{id}}" type="button" class="btn btn-danger btn-md">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
