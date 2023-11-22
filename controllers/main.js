@@ -1,25 +1,29 @@
 // main controller
 
 module.exports.home = function (req,res){
-	res.render('index',{tiltle: 'The MEAN Stack Agency'});
+	res.render('index',{title: 'Student Data'});
 }
 module.exports.about = function (req,res){
-        res.render('about');
+        res.render('about', {title: 'About'});
 }
 
 module.exports.contact = function (req,res){
-        res.render('contact');
+        res.render('contact', {title: 'Contact'});
 }
 
 module.exports.login = function (req,res){
-        res.render('login');
+        res.render('login', {title: 'Login'});
 }
  
 module.exports.register = function (req,res){
-        res.render('register');
+        res.render('register', {title: 'Register'});
 }
+/*
+module.exports.student = function(req,res){
+	res.render('students',{title: 'student'});
+}*/
 
 module.exports.forgotpassword = function (req,res){
-        res.render('forgot-password');
+        res.render('forgot-password', {title: 'For got Password'});
 }
 

@@ -1,0 +1,76 @@
+<!-- Edit Student Section -->
+<section class="page-section" id="edit-student">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="mt-0">Edit Student Details</h2>
+        <hr class="divider my-4">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- Nested Row within Card Body -->
+      <div class="row o-hidden border-0">
+        <div class="col-lg-12">
+          <form method="post" class="user" action="/students/update/{{id}}">
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputFirstName">First Name</label>
+                <input type="text" class="form-control form-control-user" name="First_name" id="inputFirstName" value="{{student.First_name}}"  required>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputLastName">Last Name</label>
+                <input type="text" class="form-control form-control-user" name="Last_name" id="inputLastName" value="{{student.Last_name}}"
+                    required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSGP">SGP</label>
+              <input type="text" class="form-control form-control-user" name="SGP" id="inputSGP" value="{{student.SGP}}"
+                  required>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputSemester">Semester</label>
+                <input type="text" class="form-control form-control-user" name="Semester" id="inputSemester" value="{{student.Semester}}"
+                   required>
+              </div>
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="inputDepartment">Department</label>
+                <input type="text" class="form-control form-control-user" name="Department" id="inputDepartment" value="{{student.Department}}"
+                   required>
+              </div>
+            </div>
+            <hr class="divider my-4">
+            <div class="form-group">
+              <label for="inputCollageName">Collage</label>
+              <input type="text" class="form-control form-control-user" name="Collage_name" id="inputCollageName" value="{{student.Collage.Collage_name}}"
+                 required>
+            </div>
+	    <div class="form-group">
+              <label for="inputZip">Zip</label>
+              <input type="Number" class="form-control" name="Zip" id="inputZip" value="{{student.Collage.Zip}}"
+
+                 required>
+            </div>
+            <div class="form-group">
+              <label for="inputBranch">Branch</label>
+              <input type="text" class="form-control" name="branch" id="inputBranch" value="{{student.Collage.branch}}">
+
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputContact">Contact</label>
+                <input type="phone" class="form-control" name="Contact" id="inputContact" value="{{student.Collage.Contact}}"
+  required>
+              </div>
+             
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Update Students</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

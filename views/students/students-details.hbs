@@ -1,0 +1,38 @@
+<!-- students details -->
+ <div class="container">
+
+    <h2 class="text-center mt-0">{{Collage.Collage_name}}</h2>
+    <hr class="divider my-4">
+    <div class="table-responsive">
+      <a class="btn btn-success my-2" href="/students/add-student/">Add Students</a>
+	<h1>{{students.First_name}}{{Last_name}}</h1>
+      <table border="1" cellspacing="0" cellpadding="5px" class="table table-hover table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Collage</th>
+            <th scope="col">Zip</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Contact</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+
+            <th scope="row">{{id}}</th>
+             <td>{{Collage.Collage_name}}</td>
+            <td>{{Collage.Zip}}</td>
+            <td>{{Collage.branch}}</td>
+            <td>{{Collage.Contact}}</td>
+            
+            </tr>
+        
+        </tbody>
+      </table>
+    </div>
+	 <a href="/students/edit/{{id}}" class="btn btn-secondary btn-sm">Edit</a>
+
+  </div>
+</section>

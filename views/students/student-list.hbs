@@ -1,42 +1,40 @@
-<!-- Provider List Section -->
-<section class="page-section py-5" id="provider-list">
+<!-- Student List Section -->
   <div class="container">
-    <h1 class="text-dark">{{title}}</h1>
-    <h2 class="text-center mt-0">At Your Service</h2>
+    
+    <h2 class="text-center mt-0">Student</h2>
     <hr class="divider my-4">
     <div class="table-responsive">
-      <a class="btn btn-success my-2" href="/providers/add-provider/">Add New Provider</a>
+      <a class="btn btn-success my-2" href="/students/addStudent/">Add New students</a>
       <table border="1" cellspacing="0" cellpadding="5px" class="table table-hover table-bordered">
         <thead class="thead-light">
           <tr>
-	    <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Zip</th>
-            <th scope="col">Age</th>
-            <th scope="col">Pay</th>
-            <th scope="col">DepartmentId</th>
-            <th scope="col">GetTaxForm</th>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">SGP</th>
+            <th scope="col">Department</th>
           </tr>
         </thead>
         <tbody>
-          {{#each providers}}
+          {{#each students}}
           <tr>
-	    
+        
             <th scope="row">{{id}}</th>
-	     <td>{{Name}}</td>	
-            <td>{{Zip}}</td>
-            <td>{{Age}}</td>
-            <td>{{Pay}}</td>
-            <td>{{DepartmentId}}</td>
-            <td>{{GetTaxForm}}</td>
-	    <td>
+             <td>{{First_name}}</td>  
+            <td>{{Last_name}}</td>
+            <td>{{SGP}}</td>
+            <td>{{Semester}}</td>
+            <td>{{Department}}</td>
+            <td>
 
-              <a href="/providers/info/{{id}}" class="btn btn-info btn-sm">More info...</a>
-              <a href="/providers/edit/{{id}}" class="btn btn-secondary btn-sm">Edit</a>
-              <a href="#my{{id}}" class="btn btn-danger btn-sm" data-toggle="modal">Delete</a>
-
+              <a href="/students/details/{{id}}" class="btn btn-info btn-sm">More info...</a>
+              <a href="/students/edit/{{id}}" class="btn btn-secondary btn-sm">Edit</a>
+              <a href="#myModal{{id}}" class="btn btn-danger btn-sm" data-toggle="modal">Delete</a>
+	  </td>
+          </tr>
+	           
               <!-- Modal Window - Confirmation -->
-              <div id="my{{id}}" class="modal fade">
+              <div id="myModal{{id}}" class="modal fade">
                 <div class="modal-dialog modal-confirm">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -52,16 +50,17 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-info btn-md" data-dismiss="modal">Cancel</button>
-                      <a href="/providers/delete/{{id}}" type="button" class="btn btn-danger btn-md">Delete</a>
-                    </div>
+                      <a href="/students/delete/{{id}}" type="button" class="btn btn-danger btn-md">Delete</a>
+                       </div>
                   </div>
                 </div>
               </div>
-            </td>
-          </tr>
+           
+         
           {{/each}}
         </tbody>
       </table>
     </div>
   </div>
 </section>
+

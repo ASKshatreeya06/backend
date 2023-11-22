@@ -48,6 +48,33 @@ var providers = [
 "Pay": 5874.09,
 "DepartmentId": 2,
 "GetTaxForm": "1099"
+},
+{
+"id":6,
+"Name":"kshatreeya",
+"Zip":"210208",
+"Age":23,
+"Pay":2000,
+"DepartmentId":"CSE",
+"GetTaxForm":"2019"
+},
+{
+"id":7,
+"Name":"Aditya",
+"Zip":"492008",
+"Age":22,
+"Pay":5000,
+"DepartmentId":"CSE",
+"GetTaxForm":"2018"
+},
+{
+"id":8,
+"Name":"Prakash",
+"Zip":"210208",
+"Age":21,
+"Pay":4500,
+"DepartmentId":"EE",
+"GetTaxForm":"2015"
 }
 ]
 
